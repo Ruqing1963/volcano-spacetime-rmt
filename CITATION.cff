@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "A Space-Time Dual-Domain Test of the Source-Superposition Law in Volcanic Systems"
+authors:
+  - family-names: Chen
+    given-names: Ruqing
+    affiliation: "GUT Geoservice Inc., Montreal"
+    email: ruqing@hotmail.com
+date-released: 2026-06-21
+license: MIT
+keywords:
+  - random matrix theory
+  - volcanology
+  - eruption periodicity
+  - magmatic arcs
+  - level repulsion
+  - spectral superposition
+  - clustering
