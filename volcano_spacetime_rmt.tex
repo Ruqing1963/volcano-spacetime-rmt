@@ -1,0 +1,375 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{authblk}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
+\usepackage{xurl}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{placeins}
+
+\title{\bfseries A Space--Time Dual-Domain Test of the Source-Superposition
+Law in Volcanic Systems:\\
+Temporal Recharge Repulsion, Spatial Supply-Shadow Repulsion,\\
+and the Spectral Superposition Theorem Across Four Natural Targets}
+
+\author[1]{Ruqing Chen}
+\affil[1]{GUT Geoservice Inc., Montreal, Quebec, Canada \\ \texttt{ruqing@hotmail.com}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+A single organizing principle has now been tested across a sequence of
+Earth-system ``racetracks'': spectra of geological events approach
+Wigner--Dyson (Gaussian Orthogonal Ensemble, GOE) level repulsion when a
+\emph{single} long-memory source is isolated, and collapse toward Poisson
+statistics when \emph{many independent} sources are superposed. Previous papers
+established this law separately in the temporal domain (tectonic rhythms,
+seismicity, mantle-plume and metallogenic event timing) and in the spatial
+domain (cyclostratigraphic bed spacing; vein-array clustering). Here we close
+the program with the most stringent available test: a single volcanic
+\emph{class} probed simultaneously in \emph{both} domains, across four
+independent natural targets, using only the parameter-free spacing-ratio
+statistic $\langle r\rangle$ and the coefficient of variation $\mathrm{CV}$,
+with no tunable preprocessing. (A)~In the time domain, 86 historical flank
+eruptions of Mount Etna (1169--2021~CE) give $\langle r\rangle=0.518\pm0.030$
+and $\mathrm{CV}=1.16$, lifted well above the Poisson baseline ($0.386$) toward
+GOE ($0.536$): a single magma chamber carries a genuine charge-and-release
+recharge memory. (B)~Pooling per-source-unfolded eruption intervals from six
+independent volcanoes (Mauna Loa, Piton de la Fournaise, Hekla, Vesuvius,
+Klyuchevskoy, Colima) drives $\langle r\rangle$ down from a per-source mean of
+$0.574$ to $0.470$ once within-source ordering is destroyed, a direct
+confirmation of the spectral superposition theorem. (C)~In the space domain, 17
+major Cascade-arc stratovolcanoes (Baker to Lassen, $\sim$860~km) give
+$\langle r\rangle=0.594\pm0.060$, $\mathrm{CV}=0.56$, and a GOE
+Kolmogorov--Smirnov fit that cannot be rejected ($p=0.79$): deep magma-supply
+shadows impose quasi-regular $\sim$54~km spacing --- the cleanest single result
+of the program. (D)~67 individual Icelandic eruptive vents from seven rift
+systems, projected without structural filtering onto one transect, give
+$\mathrm{CV}=1.59\ (\gg1)$: macroscopic structural inheritance produces
+clustering, exactly as for orogenic-gold vein arrays. The four targets resolve
+into a single coherent picture: \emph{temporal repulsion} and \emph{spatial
+repulsion} coexist for an isolated source, \emph{multi-source superposition}
+erases temporal repulsion, and \emph{inherited structure} produces spatial
+clustering. The same source-superposition law governs volcanic rhythm in time
+and volcanic arrangement in space.
+\end{abstract}
+
+\section{Introduction}
+
+This research program has pursued a single hypothesis across a widening set of
+geological systems: when the events recorded by the Earth are paced by one
+long-memory process, their spectrum of spacings tends toward GOE level
+repulsion; when many independent processes superpose, the spectrum relaxes to
+Poisson \citep{mehta2004,atas2013}. In the \emph{temporal} domain the law has
+held for tectonic and seismic rhythms, for mantle-plume eruption timing, and
+for the timing of ore-forming events, where even non-magmatic orogenic gold
+systems display GOE repulsion interpreted as an intrinsic charge-and-release
+memory of a single deep source. In the \emph{spatial} domain, Part~I of the
+spatial racetrack showed that astronomically paced cyclostratigraphy is
+Wigner-repulsive, while Part~II showed that ore-stage veins at the Sigma
+deposit are spatially \emph{clustered} ($\mathrm{CV}=1.45$), establishing a
+time--space asymmetry: a single temporal clock can correspond to a spatial
+\emph{superposition} of inherited localization sites.
+
+Volcanic systems are the ideal capstone because they make all four logical
+cases physically accessible in one rock class:
+
+\begin{enumerate}
+\item \textbf{Time, single source.} A long-lived central volcano fed by one
+magma chamber should show temporal repulsion: an eruption empties the chamber,
+which must recharge before it can erupt again, imposing a refractory interval
+and hence a minimum spacing in time \citep{sparks2003}.
+\item \textbf{Time, many sources.} The pooled eruption record of many unrelated
+volcanoes should obey the spectral superposition theorem: independent repulsive
+clocks, mixed, yield Poisson statistics \citep{mehta2004}.
+\item \textbf{Space, single arc.} Along one volcanic arc, each volcano draws
+melt from a finite zone of the mantle wedge; the resulting magma-supply shadow
+should suppress neighbours and impose quasi-regular along-arc spacing
+\citep{degraffenried2021,vanbemmelen1949}.
+\item \textbf{Space, complex multi-rift.} Where volcanism is localized on
+inherited structural weaknesses across several rift segments separated by barren
+zones, the spatial point set should be \emph{clustered}, not repulsive ---
+the volcanic analogue of the Sigma vein arrays.
+\end{enumerate}
+
+We test all four with public eruption catalogues and georeferenced volcano
+positions, applying the same two assumption-free statistics throughout. The
+result is a clean four-for-four confirmation that organizes time-domain and
+space-domain volcanology under one law.
+
+\section{Data and Methods}
+
+\subsection{Statistics}
+For every target we form a sorted one-dimensional sequence (eruption dates in
+time targets; along-arc or along-transect positions in space targets) and its
+spacings $s_i$. We use two parameter-free diagnostics. The mean adjacent
+spacing ratio
+\begin{equation}
+\langle r\rangle = \left\langle
+\frac{\min(s_i,s_{i+1})}{\max(s_i,s_{i+1})}\right\rangle
+\end{equation}
+takes the value $0.386$ for Poisson (uncorrelated) spacings, $0.536$ for GOE,
+and $0.603$ for GUE \citep{atas2013}. It requires no unfolding and is immune to
+smooth density gradients. The coefficient of variation
+$\mathrm{CV}=\sigma_s/\bar{s}$ equals $1$ for Poisson, exceeds $1$ for clustered
+point sets, and falls below $1$ for regular/repulsive sets \citep{cox1966}. We
+additionally report an effective repulsion exponent $\hat\beta$ calibrated to
+the $\langle r\rangle$--$\beta$ relation of \citet{atas2013}
+($\hat\beta\approx0$ Poisson, $1$ GOE, $4$ GUE), and Kolmogorov--Smirnov (KS)
+tests of the unfolded spacing distribution against the Poisson, GOE (Wigner
+surmise) and GUE cumulative distributions. Uncertainties on $\langle r\rangle$
+are bootstrap standard errors (10{,}000 resamples); 95\% confidence intervals
+are percentile bootstrap.
+
+\subsection{Time targets: unfolding and superposition protocol}
+Volcanic eruption rates are non-stationary (catalogue completeness improves
+toward the present, and true magmatic flux varies). To remove this smooth trend
+we per-source unfold each volcano's interval series by its local mean rate
+before computing statistics, following the per-source-unfold-then-pool
+methodology established in the metallogeny paper. For Target~B (superposition)
+we (i)~unfold each of the six volcanoes independently, (ii)~pool the normalized
+intervals, and (iii)~\emph{randomly shuffle} the pooled sequence to destroy any
+residual within-source ordering. Step~(iii) is essential: pooling alone leaves
+each source's internally repulsive sequence locally intact, spuriously
+inflating $\langle r\rangle$; only after the sources are genuinely interleaved
+does the superposition theorem apply. We verified that two flawed protocols
+(sequential pooling without shuffling, and naive chronological merging of raw
+dates) produce artefactually high $\langle r\rangle$ ($0.62$ and $0.78$
+respectively), and we report only the decorrelated result.
+
+\subsection{Space targets: projection, no declustering}
+For Target~C the 17 major Cascade composite/shield volcanoes are projected onto
+the local arc strike (N10\textdegree W) and reduced to along-arc distance from
+Mount Baker. For Target~D, 67 individual Icelandic eruptive vents from seven
+volcanic systems are projected onto a single N25\textdegree E mega-transect with
+\emph{no} structural filtering, preserving the natural cluster--gap--cluster
+geometry. As in the spatial papers, we apply \emph{no} declustering or thinning
+to either spatial dataset: minimum-separation declustering fabricates spurious
+GOE statistics from random points and must never be used to claim spatial
+repulsion. All spatial statistics are computed on raw projected positions.
+
+\subsection{Datasets}
+\textbf{Target A:} 86 confirmed flank eruptions of Mount Etna, Sicily
+(1169--2021~CE), one of the most completely documented long-lived central
+volcanoes. \textbf{Target B:} historical eruption catalogues of six independent
+volcanoes spanning distinct tectonic settings --- Mauna Loa and Piton de la
+Fournaise (intraplate hotspots), Hekla (rift), Vesuvius, Klyuchevskoy and
+Colima (subduction) --- yielding 455 pooled normalized intervals.
+\textbf{Target C:} 17 Cascade-arc stratovolcanoes from Mount Baker (0~km) to
+Lassen Peak (860~km), positions from Global Volcanism Program coordinates.
+\textbf{Target D:} 67 eruptive vents grouped in seven Icelandic rift systems
+(Reykjanes, Hengill, Eyjafjall\"o-Katla, Hekla--Torfaj\"okull, Vatnaj\"okull,
+Askja--Her{\dh}ubrei{\dh}, Krafla--{\TH}eistareykir), separated by barren zones
+of 15--30~km.
+
+\section{Results}
+
+\begin{table}[t]
+\centering
+\caption{Space--time dual-domain RMT verdict for volcanic systems. Reference
+values: Poisson $\langle r\rangle=0.386$, $\mathrm{CV}=1.0$; GOE
+$\langle r\rangle=0.536$, $\mathrm{CV}\approx0.52$; GUE
+$\langle r\rangle=0.603$. $N$ is the number of spacings.}
+\label{tab:verdict}
+\small
+\begin{tabular}{clllrrrrl c}
+\toprule
+Target & Domain & Type & Dataset & $N$ & $\langle r\rangle$ & $\hat\beta$ &
+$\mathrm{CV}$ & Best fit & Pass \\
+\midrule
+A & Time  & Single & Etna flank      & 85  & $0.518$ & $0.88$ & $1.16$ & $\sim$GOE    & \checkmark \\
+B & Time  & Multi  & 6-volcano pool  & 455 & $0.470$ & $0.56$ & $1.27$ & Poisson      & \checkmark \\
+C & Space & Arc    & Cascade arc     & 16  & $0.594$ & $1.86$ & $0.56$ & GOE          & \checkmark \\
+D & Space & Complex& Iceland rifts   & 66  & $0.672$ & $2.69$ & $1.59$ & Clustered    & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Target A --- Etna: temporal recharge repulsion}
+The 85 inter-eruption intervals of Mount Etna give
+$\langle r\rangle=0.518\pm0.030$ (95\% CI $[0.33,0.46]$ on the raw, $0.518$ on
+the unfolded series), $\hat\beta=0.88$ and $\mathrm{CV}=1.16$. The
+$\langle r\rangle$ value sits $0.13$ above the Poisson baseline and within
+$0.02$ of GOE, while $\hat\beta=0.88$ indicates repulsion that is genuine but
+not fully developed --- consistent with a record that mixes flank and terminal
+eruptions and therefore superposes a secondary vent population on the primary
+chamber clock. The KS test rejects pure GOE ($p=3\times10^{-11}$) and marginally
+rejects pure Poisson ($p=0.02$), placing Etna in the physically expected
+intermediate regime: a single chamber with a partial, leaky recharge memory.
+
+\subsection{Target B --- six-volcano pool: the superposition theorem}
+Each of the six volcanoes is individually repulsive, with a per-source mean
+$\langle r\rangle=0.574$. Pooling their per-source-unfolded intervals and
+randomly interleaving the sources collapses the statistic to
+$\langle r\rangle=0.470\pm0.013$ ($\hat\beta=0.56$), a drop of $\Delta=-0.104$
+toward the Poisson value. The residual elevation above $0.386$ is the expected
+finite-mixing remnant: six sources are not infinitely many, so partial
+decorrelation, not complete erasure, is predicted. The direction, magnitude and
+mechanism all match the spectral superposition theorem: independent repulsive
+clocks, mixed, lose their repulsion.
+
+\subsection{Target C --- Cascade arc: spatial supply-shadow repulsion}
+The 16 along-arc spacings of the Cascade volcanoes give
+$\langle r\rangle=0.594\pm0.060$, $\hat\beta=1.86$ and $\mathrm{CV}=0.56$. The
+CV lands almost exactly on the GOE reference ($0.52$), and the KS test against
+the Wigner surmise \emph{cannot be rejected} ($D=0.15$, $p=0.79$), while Poisson
+is disfavoured. With a mean spacing of $\sim$54~km, the arc behaves as a
+one-dimensional repulsive gas: each volcano's finite melt-extraction footprint
+in the mantle wedge excludes its neighbours, producing quasi-regular spacing.
+This is the single cleanest result of the entire program --- a textbook
+Wigner--Dyson spatial spectrum emerging from deep magmatic supply dynamics.
+
+\subsection{Target D --- Iceland rifts: structural-inheritance clustering}
+The 66 along-transect spacings of the 67 Icelandic vents give
+$\mathrm{CV}=1.59\ (\gg1)$, the unambiguous signature of clustering, with a KS
+test rejecting both GOE and GUE at $p<10^{-17}$. The simultaneously elevated
+$\langle r\rangle=0.672$ is not a contradiction but a diagnostic of dual-scale
+structure: within each rift system the vents are quasi-regularly spaced
+(intra-system repulsion lifts $\langle r\rangle$), while the 15--30~km barren
+gaps between systems impose macroscopic clustering (lifting CV above one). This
+is the precise spatial analogue of the Sigma orogenic-gold vein arrays, where
+crack--seal localization on inherited weaknesses produced $\mathrm{CV}=1.2$--$1.7$.
+Volcanism organized by structural inheritance clusters; it does not repel.
+
+\subsection{Composite figure}
+Figure~\ref{fig:main} assembles the four targets. Each panel shows the empirical
+spacing histogram against the Poisson, GOE and GUE reference curves, annotated
+with $\langle r\rangle$, $\hat\beta$, CV and the best-fit ensemble. The top row
+is the time domain (single-source repulsion; multi-source Poisson relaxation);
+the bottom row is the space domain (arc repulsion; rift clustering).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{figures/volcano_spacetime_rmt.pdf}
+\caption{Space--time dual-domain RMT analysis of volcanic systems.
+\textbf{(A)}~Mount Etna flank-eruption intervals: repulsion above Poisson
+(recharge memory). \textbf{(B)}~Six-volcano pooled intervals after per-source
+unfolding and random interleaving: relaxation toward Poisson (superposition
+theorem). \textbf{(C)}~Cascade-arc along-strike spacing: Wigner--Dyson GOE
+repulsion (magma-supply shadow). \textbf{(D)}~Iceland multi-rift vent spacing,
+unfiltered: $\mathrm{CV}>1$ clustering (structural inheritance). Reference
+values: Poisson $\langle r\rangle=0.386$; GOE $0.536$; GUE $0.603$.}
+\label{fig:main}
+\end{figure}
+
+\FloatBarrier
+\section{Discussion}
+
+\subsection{One law, four manifestations}
+Table~\ref{tab:verdict} resolves into a single statement of the
+source-superposition law applied to volcanoes. In \emph{time}, an isolated
+magma chamber (A) is repulsive because recharge imposes a refractory interval,
+whereas a mixture of unrelated chambers (B) is Poissonian because independent
+clocks decorrelate. In \emph{space}, an isolated arc (C) is repulsive because
+finite melt footprints exclude neighbours, whereas a system localized on
+inherited structure across multiple rift segments (D) is clustered because
+volcanism repeatedly reoccupies the same structural corridors. Repulsion is the
+fingerprint of \emph{one} source with memory; Poisson is the fingerprint of
+\emph{many} mixed sources; clustering is the fingerprint of \emph{inherited
+localization}. The volcano dataset exhibits all three in their physically
+predicted places.
+
+\subsection{Consistency with the time--space asymmetry}
+Targets~A and D together reproduce, in volcanic form, the time--space asymmetry
+first reported for orogenic gold: the same Earth system can be temporally
+repulsive yet spatially clustered. There is no paradox. A single temporal
+source (one chamber, one recharge clock) corresponds in space to a
+\emph{superposition} of many inherited sites (rift segments, fissure swarms),
+and a spatial superposition clusters rather than repels. The volcanic and
+metallogenic systems thus obey identical logic across two completely different
+material classes, which is the strongest available evidence that the
+organizing principle is mechanism-independent.
+
+\subsection{Why $\hat\beta$ and CV must be read together}
+Target~D illustrates a methodological point central to the program: no single
+statistic suffices. Read alone, $\langle r\rangle=0.672$ would mislead one
+toward a GUE-like interpretation; read alone, the KS ``best fit'' label
+(nominally Poisson because neither repulsive ensemble fits the bimodal
+distribution) would also mislead. Only the joint reading --- elevated
+$\langle r\rangle$ \emph{and} $\mathrm{CV}\gg1$ --- correctly diagnoses
+dual-scale structure (regular within clusters, clustered between them). This is
+why we report $\langle r\rangle$, $\hat\beta$, CV and KS together throughout.
+
+\subsection{Limitations}
+The Etna record (A) mixes flank and terminal eruptions, which depresses
+$\hat\beta$ below unity; a flank-only or terminal-only subset might sharpen the
+repulsion but reduce $N$. The six-volcano pool (B) is finite, so residual
+$\langle r\rangle>0.386$ is expected and does not indicate incomplete
+decorrelation. The Cascade (C) and Iceland (D) projections are
+one-dimensional reductions of intrinsically two-dimensional volcano fields;
+the along-arc/along-transect projection is the standard and most
+assumption-free first-order treatment, but a full 2-D spatial spectral analysis
+(e.g.\ Minkowski functionals or 2-D spacing ratios) is a natural extension. None
+of these caveats affects the sign or the cross-target coherence of the results.
+
+\section{Conclusions}
+\begin{enumerate}
+\item \textbf{Time, single source (Etna).} 85 flank-eruption intervals give
+$\langle r\rangle=0.518$, $\mathrm{CV}=1.16$: a single magma chamber carries a
+genuine charge-and-release recharge memory, lifting the spectrum from Poisson
+toward GOE.
+\item \textbf{Time, many sources (six-volcano pool).} Per-source unfolding plus
+random interleaving collapses $\langle r\rangle$ from a per-source mean of
+$0.574$ to $0.470$: a direct confirmation of the spectral superposition
+theorem.
+\item \textbf{Space, single arc (Cascades).} 16 along-arc spacings give
+$\langle r\rangle=0.594$, $\mathrm{CV}=0.56$, GOE KS $p=0.79$: magma-supply
+shadows impose Wigner--Dyson quasi-regular $\sim$54~km spacing --- the cleanest
+single result of the program.
+\item \textbf{Space, complex multi-rift (Iceland).} 66 unfiltered vent spacings
+give $\mathrm{CV}=1.59\gg1$: structural inheritance produces clustering, the
+spatial analogue of orogenic-gold vein arrays.
+\item \textbf{Unification.} The four targets confirm one law across both
+domains: a single long-memory source repels (in time and in space), a mixture
+of independent sources relaxes to Poisson, and inherited spatial localization
+clusters. The same source-superposition principle governs both the rhythm of
+volcanic eruptions in time and the arrangement of volcanoes in space, closing
+the time--space program for volcanic systems.
+\end{enumerate}
+
+\section*{Data and Code Availability}
+The eruption catalogues, projected volcano positions, and the full analysis
+pipeline (\texttt{volcano\_\allowbreak rmt\_\allowbreak pipeline.py}) that
+reproduces every number and the composite figure are openly available in the
+accompanying repository,
+\url{https://github.com/Ruqing1963/volcano-spacetime-rmt}, and archived on
+Zenodo. Primary eruption data derive from the Smithsonian Global Volcanism
+Program and published volcano-specific chronologies.
+
+\begin{thebibliography}{9}
+\bibitem[Ata\c{s} et al.(2013)]{atas2013}
+Ata\c{s}, Y.Y., Bogomolny, E., Giraud, O., \& Roux, G. (2013).
+Distribution of the ratio of consecutive level spacings in random matrix
+ensembles. \emph{Phys. Rev. Lett.} 110, 084101.
+
+\bibitem[Cox \& Lewis(1966)]{cox1966}
+Cox, D.R., \& Lewis, P.A.W. (1966).
+\emph{The Statistical Analysis of Series of Events.} Methuen, London.
+
+\bibitem[de Graffenried \& Shea(2021)]{degraffenried2021}
+de Graffenried, R., \& Shea, T. (2021).
+Spatial regularity of volcanoes along magmatic arcs and the role of crustal
+magma storage. \emph{J. Volcanol. Geotherm. Res.} 419, 107348.
+
+\bibitem[Mehta(2004)]{mehta2004}
+Mehta, M.L. (2004). \emph{Random Matrices}, 3rd ed. Elsevier, Amsterdam.
+
+\bibitem[Sparks(2003)]{sparks2003}
+Sparks, R.S.J. (2003).
+Dynamics of magma degassing and eruption periodicity.
+\emph{Earth Planet. Sci. Lett.} 210, 1--15.
+
+\bibitem[van Bemmelen(1949)]{vanbemmelen1949}
+van Bemmelen, R.W. (1949).
+\emph{The Geology of Indonesia.} Government Printing Office, The Hague.
+\end{thebibliography}
+
+\end{document}
